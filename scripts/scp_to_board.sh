@@ -3,7 +3,7 @@ if [ $# != 1 ]; then
    exit 1
 fi
 
-echo "Copying /home/nari/presien/backup/workspace_on_board/gmsl2-scripts/scripts to $1:/home/ai-blox/"
-scp -r /home/nari/presien/backup/workspace_on_board/gmsl2-scripts/scripts ai-blox@$1:/home/ai-blox/
+echo "Coying scripts to $1:/home/ai-blox/"
+scp -r ${PWD}/../scripts ai-blox@$1:/home/ai-blox/
 echo "Copying done"
 
