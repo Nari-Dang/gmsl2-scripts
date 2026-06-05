@@ -33,7 +33,7 @@ echo "0x206 0x83" > /sys/class/i2c-dev/i2c-1/device/1-0064/regdump
 # PULL_UPDN_SEL[7:6] = 0b01 Pullup
 # OUT_TYPE[5] = 0 Open drain
 # GPIO_TX_ID[4:0] = 2
-echo "0x207 0x42" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump
+echo "0x207 0x42" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump
 
 
 # GPIO A
@@ -45,4 +45,4 @@ echo "0x207 0x42" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump
 #   GPIO_RX_EN[2] = 1:  RX enable
 #   GPIO_TX_EN[1] = 0: TX disable
 #   GPIO_OUT_DIS[0] = 0: output driver enabled
-echo "0x206 0x8c" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump
+echo "0x206 0x8c" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump

@@ -20,5 +20,5 @@ echo "0x434 16" > /sys/class/i2c-dev/i2c-1/device/1-0064/regdump_cfg
 cat  /sys/class/i2c-dev/i2c-1/device/1-0064/regdump
 
 
-echo "0x13 32" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump_cfg
-cat  /sys/class/i2c-dev/i2c-1/device/1-0048/regdump
+echo "0x13 32" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump_cfg
+cat  /sys/class/i2c-dev/i2c-9/device/9-0048/regdump

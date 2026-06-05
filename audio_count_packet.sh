@@ -18,10 +18,10 @@
 # Note: this should be done once. Otherwise running this script
 # for next times will clear the counter.
 # echo "2 15" > /sys/class/i2c-dev/i2c-1/device/1-0064/packet_count
-# echo "2 15" > /sys/class/i2c-dev/i2c-1/device/1-0048/packet_count
+# echo "2 15" > /sys/class/i2c-dev/i2c-9/device/9-0048/packet_count
 
 echo "MAX96751 packet count"
 #cat /sys/class/i2c-dev/i2c-1/device/1-0064/packet_count
 
 echo "MAX96752 packet count"
-cat /sys/class/i2c-dev/i2c-1/device/1-0048/packet_count
+cat /sys/class/i2c-dev/i2c-9/device/9-0048/packet_count

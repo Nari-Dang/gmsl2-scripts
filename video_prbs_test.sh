@@ -1,11 +1,11 @@
 if [ $1 == 0 ]; then
     echo "Disable video PRBS test"
-    echo "0x1cd 0x00" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump
+    echo "0x1cd 0x00" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump
     echo "0x1e5 0x00" > /sys/class/i2c-dev/i2c-1/device/1-0064/regdump
     echo "0x2a 0x20" > /sys/class/i2c-dev/i2c-1/device/1-0064/regdump
     echo "0x29 0x00" > /sys/class/i2c-dev/i2c-1/device/1-0064/regdump
-    echo "0x1f" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump; dmesg | grep 0x001f
-    echo "0x1cc" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump; dmesg | grep 0x01cc
+    echo "0x1f" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump; dmesg | grep 0x001f
+    echo "0x1cc" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump; dmesg | grep 0x01cc
     exit
 fi;
 
@@ -44,17 +44,17 @@ echo "0x1e5 0x80" > /sys/class/i2c-dev/i2c-1/device/1-0064/regdump;
 # BIT 5: VPRBS_FAIL
 # BIT 4: VPRBS_CHK_EN
 # Set 1 to BIT 4 to enable VPRBS checker
-echo "0x1cd 0x10" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump;
+echo "0x1cd 0x10" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump;
 
 ###################################################################
 # READ PRBS ERROR NUMBER AND STATUS ON DESERIALIZER               #
 ###################################################################
 # INR7 (0x1f)
 # BIT 2: VPRBS_ERR_FLAG: indicate VPRBS errror
-echo "0x1f" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump; dmesg | grep 0x001f
+echo "0x1f" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump; dmesg | grep 0x001f
 
 # PRBS_ERR (0x1cc)
 # BIT 7-0: number of VPRBS error, clear on read
-echo "0x1cc" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump; dmesg | grep 0x01cc
+echo "0x1cc" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump; dmesg | grep 0x01cc
 
 

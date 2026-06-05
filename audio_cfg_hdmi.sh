@@ -28,4 +28,4 @@ echo "0x0120 0x00" > /sys/class/i2c-dev/i2c-1/device/1-0064/regdump
 # ADUIO_RX1 0x140
 # Bit 0: 0 audio RX disable, 1 audio RX enable
 # Default: 0x21
-echo "0x0140 0x21" > /sys/class/i2c-dev/i2c-1/device/1-0048/regdump
+echo "0x0140 0x21" > /sys/class/i2c-dev/i2c-9/device/9-0048/regdump
